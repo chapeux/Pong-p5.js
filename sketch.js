@@ -50,7 +50,6 @@ function draw() {
   mostrarRaquete(xRaquete, yRaquete);
   mostrarRaquete(xRaqueteOponente, yRaqueteOponente)
   movimentoRaquete();
-  //verificaColisaoRaquete();
   colisaoRaqueteBiblioteca(xRaquete, yRaquete);
   colisaoRaqueteBiblioteca(xRaqueteOponente, yRaqueteOponente);
   movimentaRaqueteOponente();
@@ -88,14 +87,6 @@ function movimentoRaquete(){
   }
   if (keyIsDown(DOWN_ARROW)){
     yRaquete += 10;
-  }
-}
-
-function verificaColisaoRaquete(){
-  if (xBolinha - raio < xRaquete + comprimentoRaquete
-     && yBolinha - raio < yRaquete + alturaRaquete
-     && yBolinha + raio > yRaquete){
-    velocidadeX *= -1;
   }
 }
 
